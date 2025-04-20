@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.display-1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+}
+
+.display-3 {
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#timer-display, #live-timer-display {
+    font-family: 'Courier New', monospace;
+    color: #0d6efd;
+}
+
+.btn-group .btn {
+    padding: 0.5rem 1.5rem;
+}
+
+#start-timer, #pause-timer, #reset-timer {
+    min-width: 100px;
+}
+
+#pomodoro-count {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 3rem;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Animation for timer */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.timer-pulse {
+    animation: pulse 1s infinite;
+}
